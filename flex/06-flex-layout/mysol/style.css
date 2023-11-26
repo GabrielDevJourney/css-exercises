@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  /* *ao ser coluna "3 seccoes" por assim dizer fazendo com que seja mais simples posicionar tudo */
+  flex-direction: column;
+}
+
+img {
+  width: 600px;
+}
+
+button {
+  font-family: Roboto, sans-serif;
+  border: none;
+  border-radius: 8px;
+  background: #eee;
+}
+
+input {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 8px 24px;
+  width: 400px;
+  margin-bottom: 16px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+ul{
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.content{
+  /* *Este flex de 1 representa que tanto o grow o shrink e o flex-bais vai se comprar conforme o espaco disponivel na pagina como esta tinha bastante no eixo de coluna o flex-basis com valor zero vai empurar tudo para que este fique no centro uma vez que é esse o posicionamento dele */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* *Com este comportamento de coluna os exios acabam por dar swap logo align-item e o eixo horizontal e o justify-content o eixo vertical */
+  align-items: center;
+  justify-content: center;
+}
+
+.header,.footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.footer{
+  background-color: #eeeeee ;
+}
